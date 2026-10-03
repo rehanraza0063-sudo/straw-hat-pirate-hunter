@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Straw Hat: Pirate Hunter</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"></head>
+<body>
+<div id="stage">
+<canvas id="c" width="1280" height="720"></canvas>
+
+<div id="hud" class="hide">
+ <div id="tl"><div class="lbl">HEALTH</div><div class="bar hp"><i id="hp"></i></div><div class="lbl">STAMINA</div><div class="bar st"><i id="st"></i></div></div>
+ <div id="mis"><b id="mt1"></b><span id="mt2"></span></div>
+ <div id="sc">🪙 <span id="scn">0</span></div>
+ <div id="boss" class="hide"><b>PIRATE CAPTAIN</b><div class="bar hp big"><i id="bh"></i></div></div>
+ <div id="combo"></div>
+ <div id="banner"><div id="b1"></div><div id="b2"></div></div>
+ <div id="abil">
+  <span id="a0"><em>LMB</em>Attack</span><span id="a1"><em>3rd hit</em>Heavy</span><span id="a2"><em>Q</em>Dash</span><span id="a3"><em>RMB</em>Special</span>
+ </div>
+</div>
+<div id="flash"></div>
+
+<div id="menu" class="scr left">
+ <h1>STRAW HAT<small>PIRATE HUNTER</small></h1>
+ <button id="play">PLAY</button><button id="how">HOW TO PLAY</button><button id="set">SETTINGS</button>
+ <p class="hint">Original 2D adventure · no downloads needed</p>
+</div>
+<div id="howS" class="scr hide"><h2>HOW TO PLAY</h2>
+ <p><b>W A S D</b> move (up/down walks into the screen) · <b>Shift</b> run · <b>Space</b> jump<br>
+ <b>Left Mouse</b> attack: punch → punch → HEAVY (combo) · <b>Right Mouse</b> special wave<br>
+ <b>Q</b> dash / dodge · <b>E</b> smash crates &amp; barrels (coins and health) · <b>Esc</b> pause<br><br>
+ Find the pirates → defeat them → reach the village → beat the Pirate Captain at the dock!</p>
+ <button class="back">BACK</button></div>
+<div id="setS" class="scr hide"><h2>SETTINGS</h2>
+ <label>Music volume <input id="vm" type="range" min="0" max="1" step="0.05" value="0.5"></label>
+ <label>Effects volume <input id="vs" type="range" min="0" max="1" step="0.05" value="0.7"></label>
+ <button class="back">BACK</button></div>
+<div id="pause" class="scr hide"><h2>PAUSED</h2><button id="resume">RESUME</button><button class="mm">MAIN MENU</button></div>
+<div id="over" class="scr end hide"><div><h1 class="red">DEFEATED</h1></div><div class="btns"><button id="retry">RETRY</button><button class="mm">MAIN MENU</button></div></div>
+<div id="win" class="scr end hide"><div><h1>VILLAGE SAVED!</h1><p>The pirates have been defeated.</p></div><div class="btns"><button id="again">PLAY AGAIN</button><button class="mm">MAIN MENU</button></div></div>
+</div>
+<script src="js/audio.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/world.js"></script>
+<script src="js/combat.js"></script>
+<script src="js/player.js"></script>
+<script src="js/enemies.js"></script>
+<script src="js/missions.js"></script>
+<script src="js/main.js"></script>
+</body></html>
